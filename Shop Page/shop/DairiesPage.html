@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="This pagefeatures descriptions of various products sorted according to categories, and includes details like the product name, price, quantity, and any discounts. "
+    />
+    <meta
+      name="keywords"
+      content="KiranaStation, grocery store, organic, buy, grocery"
+    />
+    <meta
+      name="author"
+      content="Pragun Raj Maskey, Aaditya Bhattarai, Soumyata Shakya, Aarati Dhakal"
+    />
+    <title>Kirana Station - Daries</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Anek+Malayalam:wght@100..800&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
+        margin: 0;
+        scrollbar-width: none;
+        font-family: sans-serif;
+      }
+
+      /* navitems */
+      body {
+        zoom: 100%;
+        background-image: url(../images/site-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+
+      /* circle */
+      .circle {
+        width: auto;
+        height: 2500px;
+        top: -1840px;
+        left: -1220px;
+        position: fixed;
+        transition: transform 1.5s ease;
+      }
+
+      /* Categories-container */
+      .categories-container {
+        background-color: #d9d9d9;
+        width: 470px;
+        height: 240px;
+        position: fixed;
+        bottom: 50px;
+        left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #d9d9d9;
+        border-radius: 50px;
+        padding-top: 4px;
+        padding-left: 10px;
+        padding-right: 0px;
+        padding-bottom: 10px;
+      }
+
+      .sale1 {
+        position: absolute;
+        height: 65px;
+        width: auto;
+        top: 1.3rem;
+        left: 26.8rem;
+      }
+
+      .sale2 {
+        position: absolute;
+        height: 65px;
+        width: auto;
+        top: 8.5rem;
+        left: 6.2rem;
+      }
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        width: 86%;
+        padding-bottom: 12px;
+      }
+
+      .category1-fruitsbtn,
+      .category1-veggiesbtn,
+      .category1-dairiesbtn,
+      .category1-snacksbtn {
+        transform: scale(0.85);
+        background-color: transparent;
+        border: none;
+        margin-top: 13px;
+        margin-left: 30px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+
+      .category2-beveragesbtn,
+      .category2-spicesbtn,
+      .category2-meatbtn,
+      .category2-grainsbtn {
+        transform: scale(0.85);
+        background-color: transparent;
+        border: none;
+        margin-left: 28px;
+        transform: translateX(-6%);
+        cursor: pointer;
+      }
+
+      .categories1-fruits,
+      .categories1-veggies {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        color: #989898;
+        font-size: 13px;
+        padding-left: 32px;
+        padding-right: 32px;
+        transform: translate(-430px, 85px);
+        transition: all 0.25s ease-out;
+      }
+
+      .categories1-dairies,
+      .categories1-snacks {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        color: #989898;
+        font-size: 13px;
+        padding-left: 37px;
+        padding-right: 34px;
+        transform: translate(-442px, 86px);
+        transition: all 0.25s ease-out;
+      }
+
+      .categories2-beverages,
+      .categories2-spices {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        color: #989898;
+        font-size: 13px;
+        padding-left: 16px;
+        padding-right: 16px;
+        white-space: nowrap;
+        transform: translate(-430px, 75px);
+        transition: all 0.25s ease-out;
+      }
+
+      .categories2-protein,
+      .categories2-grains {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-weight: 600;
+        color: #989898;
+        font-size: 13px;
+        padding-left: 33px;
+        padding-right: 30px;
+        transform: translate(-438px, 75px);
+        transition: all 0.25s ease-out;
+      }
+
+      .categories-container a {
+        cursor: pointer;
+      }
+
+      .active-category-highlight {
+        height: 1px;
+        width: 50px;
+        border-radius: 100px;
+        border: solid 1px #ffffff;
+        background-color: #ffffff;
+        transform: translate(254px, -116px);
+      }
+
+      .category1-fruitsbtn:hover ~ .categories1-fruits,
+      .category1-veggiesbtn:hover ~ .categories1-veggies,
+      .category1-dairiesbtn:hover ~ .categories1-dairies,
+      .category1-snacksbtn:hover ~ .categories1-snacks,
+      .category2-beveragesbtn:hover ~ .categories2-beverages,
+      .category2-spicesbtn:hover ~ .categories2-spices,
+      .category2-meatbtn:hover ~ .categories2-protein,
+      .category2-grainsbtn:hover ~ .categories2-grains {
+        color: #ffffff;
+        text-shadow: 0 8px 8px #c3c3c3;
+      }
+
+      .category1-fruitsbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category1-veggiesbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category1-dairiesbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category1-snacksbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category2-beveragesbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category2-spicesbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category2-meatbtn img {
+        transition: all 0.3s ease-out;
+      }
+      .category2-grainsbtn img {
+        transition: all 0.3s ease-out;
+      }
+
+      .category1-fruitsbtn img:hover,
+      .category1-veggiesbtn img:hover,
+      .category1-dairiesbtn img:hover,
+      .category1-snacksbtn img:hover,
+      .category2-beveragesbtn img:hover,
+      .category2-spicesbtn img:hover,
+      .category2-meatbtn img:hover,
+      .category2-grainsbtn img:hover {
+        filter: invert(50%);
+      }
+
+      .category1-snacksbtn:hover ~ .sale1,
+      .category2-beveragesbtn:hover ~ .sale2 {
+        opacity: 30%;
+      }
+
+      .category1-snacksbtn:hover ~ .sale1,
+      .category2-beveragesbtn:hover ~ .sale2 {
+        filter: saturate(200%);
+        transition: opacity 0.3s ease-out;
+      }
+
+      /* Addtocart&Description-container */
+      .container {
+        background-color: #d9d9d9;
+        opacity: 100%;
+        padding: 20px;
+        height: 480px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 60%;
+        margin: 0 auto;
+        border-radius: 50px;
+        position: fixed;
+        bottom: 50px;
+        right: 30px;
+      }
+
+      .button-container {
+        color: transparent;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-self: flex-end;
+      }
+
+      .button {
+        background-color: rgba(156, 156, 156, 0.15);
+        color: transparent;
+        padding: 25px 20px;
+        margin: 6px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 8px;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        transition: all 0.3s ease;
+        z-index: 1;
+      }
+
+      .button:hover {
+        background-color: #bababa86;
+        opacity: 100%;
+      }
+
+      .button:active {
+        background-color: rgb(161, 171, 158);
+        opacity: 100%;
+      }
+
+      .button-selected::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        background-color: rgba(145, 145, 145, 0.2);
+        border: solid 1px #ffffff;
+        border-radius: 20px;
+        z-index: -1;
+      }
+
+      .btn-topoffs {
+        background-color: transparent;
+        display: flex;
+        position: absolute;
+        margin-top: 415px;
+        z-index: 0;
+        cursor: pointer;
+      }
+
+      .img1 {
+        margin-left: 10px;
+        margin-right: 37px;
+        scale: 1.12;
+      }
+
+      .img2 {
+        margin-right: 36px;
+        scale: 1.62;
+      }
+
+      .img3 {
+        margin-right: 40px;
+        scale: 1.15;
+      }
+
+      .img4 {
+        margin-right: 22px;
+        scale: 1.3;
+      }
+
+      .img5 {
+        margin-right: 22px;
+        scale: 1;
+      }
+
+      .img6 {
+        margin-right: 34px;
+        scale: 1.28;
+      }
+
+      .img7 {
+        margin-right: 32px;
+        scale: 1.17;
+      }
+
+      .img8 {
+        margin-right: 34px;
+        scale: 0.95;
+      }
+
+      .img9 {
+        margin-right: 30px;
+        scale: 0.95;
+      }
+
+      .img10 {
+        scale: 0.95;
+      }
+
+      .btnsection-divider {
+        position: absolute;
+        margin-top: 220px;
+        width: 920px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: white;
+      }
+
+      .text-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-family: "Anonymous Pro", monospace;
+        font-size: 24px;
+        transition: opacity 0.5s, transform 0.5s;
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .title-text {
+        color: white;
+        font-family: "Anek Malayalam";
+        font-weight: 300;
+        font-size: 80px;
+        padding-top: 28px;
+        padding-left: 25px;
+        line-height: 60%;
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      .normal-text {
+        color: white;
+        font-family: "Almarai";
+        font-weight: 800;
+        font-size: 68px;
+        padding-left: 23px;
+      }
+
+      .additional-text {
+        color: #656865;
+        line-height: 1;
+        margin-right: 105px;
+        margin-top: 20px;
+        font-family: "Almarai";
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 10px;
+        padding-left: 28px;
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      .IDAcontainer {
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+      }
+
+      .IDAbutton {
+        background-color: #c9c9c9;
+        border: solid 1px #ffffff;
+        color: white;
+        padding: 10px 20px;
+        margin: 20px 5px;
+        font-family: "Montserrat";
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        outline: none;
+        transform: translateX(600px);
+        transition: all 0.2s ease;
+      }
+
+      .IDAbutton:active {
+        background-color: #617961;
+      }
+
+      .display {
+        padding: 10px 20px;
+        background-color: #f1f1f1;
+        margin: 0 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        transform: translateX(600px);
+      }
+
+      .custom-popup {
+        display: none;
+        position: fixed;
+        padding-left: 14px;
+        padding-right: 14px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-left: 450px;
+        margin-top: 4px;
+        background-color: #c9c9c9;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        border-radius: 15px;
+        transform: translateY(105%);
+      }
+
+      .custom-popup.active {
+        display: block;
+      }
+
+      .popup-message {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 12px;
+        font-family: "Montserrat";
+      }
+
+      .ok-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background-color: #95a787;
+        font-family: "Montserrat";
+        font-size: 12px;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+
+      .price-text {
+        position: absolute;
+        font-size: 16px;
+        margin-left: 26px;
+        font-family: "Montserrat Alternates";
+        font-weight: 500;
+        background-color: rgb(80, 156, 54);
+        color: rgb(255, 255, 255);
+        border: solid 1px greenyellow;
+        border-radius: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+
+      .quantity-text {
+        position: absolute;
+        font-size: 22px;
+        margin-left: 400px;
+        font-family: "Montserrat Alternates";
+        color: rgb(255, 255, 255);
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/1fb25901b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-logo" style="flex-grow: 1">
+        <img src="../../Images/SiteLogo.png" height="55px" />
+      </div>
+
+      <nav>
+        <a href="../../index.html">Home </a>
+        <a href="./FruitsPage.html"
+          >Shop
+          <div class="anchor-highlight"></div
+        ></a>
+        <a href="../../research.html">Research</a>
+        <a href="../../blog.html">Blog</a>
+        <a href="../../aboutus.html">About Us</a>
+      </nav>
+
+      <div class="right-header">
+        <div class="search-container">
+          <input type="text" />
+          <button type="submit" onclick="window.location.href = '../extras/pageInDev.html';">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="icon">
+          <button
+            class="account-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/accounticon.png" />
+          </button>
+          <button
+            class="wishlist-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/wishlisticon.png" />
+          </button>
+          <button
+            class="cart-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/carticon.png" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div><img src="../images/Dairies-circle.png" class="circle" /></div>
+    <div class="container">
+      <div class="text-container">
+        <div class="title-text"></div>
+        <div class="normal-text"></div>
+        <div class="additional-text"></div>
+        <div class="IDAcontainer">
+          <div class="price-text"></div>
+          <div class="quantity-text"></div>
+          <button class="IDAbutton" onclick="decrement()">-</button>
+          <div class="display">1</div>
+          <button class="IDAbutton" onclick="increment()">+</button>
+          <button class="IDAbutton" onclick="addToCart()">Add to Cart</button>
+
+          <div class="custom-popup" id="popup">
+            <div class="popup-message" id="popup-message"></div>
+            <button class="ok-button" onclick="closePopup()">OK</button>
+          </div>
+
+          <div class="btnsection-divider"></div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button
+          class="button button-1 button-selected"
+          onclick="selectButton(1)"
+        >
+          Button 1
+        </button>
+        <button class="button button-2" onclick="selectButton(2)">
+          Button 2
+        </button>
+        <button class="button button-3" onclick="selectButton(3)">
+          Button 3
+        </button>
+        <button class="button button-4" onclick="selectButton(4)">
+          Button 4
+        </button>
+        <button class="button button-5" onclick="selectButton(5)">
+          Button 5
+        </button>
+        <button class="button button-6" onclick="selectButton(6)">
+          Button 6
+        </button>
+        <button class="button button-7" onclick="selectButton(7)">
+          Button 7
+        </button>
+        <button class="button button-8" onclick="selectButton(8)">
+          Button 8
+        </button>
+        <button class="button button-9" onclick="selectButton(9)">
+          Button 9
+        </button>
+        <button class="button button-10" onclick="selectButton(10)">
+          Button 10
+        </button>
+      </div>
+
+      <div class="btn-topoffs">
+        <img
+          class="img1"
+          src="../images/DAIRIES/Milk.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img2"
+          src="../images/DAIRIES/Butter.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img3"
+          src="../images/DAIRIES/Cheese.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img4"
+          src="../images/DAIRIES/Paneer.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img5"
+          src="../images/DAIRIES/Yogurt.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img6"
+          src="../images/DAIRIES/GreekYogurt.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img7"
+          src="../images/DAIRIES/Ghee.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img8"
+          src="../images/DAIRIES/CottonIcecream.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img9"
+          src="../images/DAIRIES/ChocoIcecream.png"
+          width="auto"
+          height="60px"
+        />
+        <img
+          class="img10"
+          src="../images/DAIRIES/MixedIcecream.png"
+          width="auto"
+          height="60px"
+        />
+      </div>
+    </div>
+
+    <div class="categories-container">
+      <div class="row">
+        <button id="cat1" class="category1-fruitsbtn">
+          <img src="../images/Fruits.png" />
+        </button>
+        <button id="cat2" class="category1-veggiesbtn">
+          <img src="../images/Vegetables.png" />
+        </button>
+        <button id="cat3" class="category1-dairiesbtn">
+          <img src="../images/Dairies.png" />
+        </button>
+        <button id="cat4" class="category1-snacksbtn">
+          <img src="../images/Snacks.png" />
+        </button>
+
+        <a class="categories1-fruits">Fruits</a>
+        <a class="categories1-veggies">Veggies</a>
+        <a class="categories1-dairies">Dairies</a>
+        <a class="categories1-snacks">Snacks</a>
+        <div class="sale1">
+          <img src="../images/sale1.png" width="28px" height="auto" />
+        </div>
+      </div>
+
+      <div class="row">
+        <button id="cat5" class="category2-beveragesbtn">
+          <img src="../images/Beverages.png" />
+        </button>
+        <button id="cat6" class="category2-spicesbtn">
+          <img src="../images/Spices.png" />
+        </button>
+        <button id="cat7" class="category2-meatbtn">
+          <img src="../images/Meat.png" />
+        </button>
+        <button id="cat8" class="category2-grainsbtn">
+          <img src="../images/Grains.png" />
+        </button>
+
+        <a class="categories2-beverages">Beverages</a>
+        <a class="categories2-spices">Spices & Oils</a>
+        <a class="categories2-protein">Protein</a>
+        <a class="categories2-grains">Grains</a>
+        <div class="sale2">
+          <img src="../images/sale2.png" width="28px" height="auto" />
+        </div>
+      </div>
+
+      <div class="active-category-highlight"></div>
+    </div>
+
+    <script>
+      let currentButton = 1;
+      let rotation = 0;
+
+      function selectButton(buttonNumber) {
+        // Array of description texts
+        const texts = [
+          {
+            title: "DAIRIES",
+            content: "MILK (DDC)",
+            additional:
+              "Indulge in the rich, luscious, creamy goodness of DDC milk. Sourced from the finest dairy farms, our milk is packed with essential nutrients and is perfect for enjoying on its own or adding to your favorite recipes.",
+            price: "Rs. 55",
+            quantity: "Quantity (in pkt)",
+          },
+          {
+            title: "DAIRIES",
+            content: "BUTTER (AMUL)",
+            additional:
+              "Experience the rich, creamy taste of Amul butter. Made from the finest ingredients, our butter is perfect for spreading on toast, baking, or adding a rich flavor to your favorite dishes.",
+            price: "Rs. 130",
+            quantity: "Quantity (in pkt)",
+          },
+          {
+            title: "DAIRIES",
+            content: "CHEESE (AMUL)",
+            additional:
+              "Savor the rich, creamy texture and bold flavor of Amul cheese. Made with the highest quality ingredients, our cheese is perfect for snacking, cooking, or adding a delicious twist to your favorite dishes.",
+            price: "Rs. 230",
+            quantity: "Quantity (in pkt)",
+          },
+          {
+            title: "DAIRIES",
+            content: "PANEER (DDC)",
+            additional:
+              "Enjoy the soft, creamy texture of DDC paneer. Made from the finest quality milk, our paneer is perfect for adding a protein boost to your meals or creating mouthwatering Indian dishes.",
+            price: "Rs. 405",
+            quantity: "Quantity (in pkt)",
+          },
+          {
+            title: "DAIRIES",
+            content: "YOGURT (ND'S)",
+            additional:
+              "Delight in the creamy goodness of ND's yogurt. Made with fresh milk and live cultures, our yogurt is perfect for breakfast, snacks, or as a healthy dessert alternative.",
+            price: "Rs. 145",
+            quantity: "Quantity (in Ltr)",
+          },
+          {
+            title: "DAIRIES",
+            content: "GREEK YOGURT (DD)",
+            additional:
+              "Experience the thick, creamy texture and fruity flavor of Delish Dairies' Greek yogurt with mixed berries. Packed with protein and probiotics, our Greek yogurt is perfect for a healthy and satisfying snack.",
+            price: "Rs. 165",
+            quantity: "Quantity (in pkt)",
+          },
+          {
+            title: "DAIRIES",
+            content: "GHEE (MANARAM)",
+            additional:
+              "Experience the rich, nutty flavor of our premium ghee. Made from pure butter, our ghee is perfect for cooking, baking, or adding a delicious flavor to your favorite dishes.",
+            price: "Rs. 1520",
+            quantity: "Quantity (in Ltr)",
+          },
+          {
+            title: "DAIRIES",
+            content: "ICE-CREAM (COTTON)",
+            additional:
+              "Indulge in the sweet, nostalgic flavor of Baskin Robbins' Cotton Candy ice cream. Made with real cotton candy flavor, our ice cream is a delightful treat for kids and adults alike.",
+            price: "Rs. 2900",
+            quantity: "Quantity (in Ltr)",
+          },
+          {
+            title: "DAIRIES",
+            content: "ICE-CREAM (CHOCO)",
+            additional:
+              "Savor the rich, chocolatey goodness of Baskin Robbins' Rocky Road ice cream. Packed with chocolate chunks, marshmallows, and nuts, our ice cream is a deliciously satisfying treat.",
+            price: "Rs. 2750",
+            quantity: "Quantity (in Ltr)",
+          },
+          {
+            title: "DAIRIES",
+            content: "ICE-CREAM (MIXED)",
+            additional:
+              "Experience the wild and reckless flavors of our ice cream. Made with a mix of bold and daring ingredients, this ice cream from Baskin Robbins is perfect for those who crave adventure in every scoop.",
+            price: "Rs. 2990",
+            quantity: "Quantity (in Ltr)",
+          },
+        ];
+
+        document.querySelector(".text-container").style.opacity = 0;
+        document.querySelector(".text-container").style.transform =
+          "translateX(-20px)";
+        setTimeout(() => {
+          // Display the category, item name, description, price tag and quantity for the selected button
+          document.querySelector(".title-text").textContent =
+            texts[buttonNumber - 1].title;
+          document.querySelector(".normal-text").textContent =
+            texts[buttonNumber - 1].content;
+          document.querySelector(".additional-text").textContent =
+            texts[buttonNumber - 1].additional;
+          document.querySelector(".price-text").textContent =
+            texts[buttonNumber - 1].price;
+          document.querySelector(".quantity-text").textContent =
+            texts[buttonNumber - 1].quantity;
+
+          // Rotate the circle based on button selection
+          rotation = (buttonNumber - 1) * 36;
+          document.querySelector(
+            ".circle"
+          ).style.transform = `rotate(${rotation}deg)`;
+
+          // Update the button selection
+          currentButton = buttonNumber;
+
+          // Update button styles
+          var buttons = document.querySelectorAll(".button");
+          buttons.forEach(function (button, index) {
+            if (index + 1 === buttonNumber) {
+              button.classList.add("button-selected");
+            } else {
+              button.classList.remove("button-selected");
+            }
+          });
+
+          // Show text elements with delay transition
+          setTimeout(() => {
+            document.querySelector(".text-container").style.opacity = 1;
+            document.querySelector(".text-container").style.transform =
+              "translateX(0)";
+          }, 50);
+        }, 700);
+      }
+
+      // Initially display text for Button 1
+      selectButton(1);
+
+      let display = document.querySelector(".display");
+      let value = 1;
+
+      function increment() {
+        if (value < 8) {
+          value++;
+          display.textContent = value;
+        } else {
+          openPopup("The maximum limit of adding this item to cart is 8.");
+        }
+      }
+
+      function decrement() {
+        if (value > 1) {
+          value--;
+          display.textContent = value;
+        } else {
+          openPopup(
+            "The minimum requirement of adding this item to cart is 1."
+          );
+        }
+      }
+
+      function addToCart() {
+        let message = `Your item${
+          value === 1 ? " has" : "s have"
+        } been successfully added to the cart.`;
+        openPopup(message);
+      }
+
+      function openPopup(message) {
+        let popup = document.getElementById("popup");
+        let popupMessage = document.getElementById("popup-message");
+        popupMessage.textContent = message;
+        popup.classList.add("active");
+      }
+
+      function closePopup() {
+        let popup = document.getElementById("popup");
+        popup.classList.remove("active");
+      }
+
+      // Add event listeners to buttons for redirecting to sub-pages
+      document.getElementById("cat1").addEventListener("click", function () {
+        window.location.href = "FruitsPage.html";
+      });
+
+      // Add event listeners to buttons for redirecting to sub-pages
+      document.getElementById("cat1").addEventListener("click", function () {
+        window.location.href = "FruitsPage.html";
+      });
+
+      document.getElementById("cat2").addEventListener("click", function () {
+        window.location.href = "VeggiesPage.html";
+      });
+
+      document.getElementById("cat3").addEventListener("click", function () {
+        window.location.href = "DairiesPage.html";
+      });
+
+      document.getElementById("cat4").addEventListener("click", function () {
+        window.location.href = "SnacksPage.html";
+      });
+
+      document.getElementById("cat5").addEventListener("click", function () {
+        window.location.href = "BeveragesPage.html";
+      });
+
+      document.getElementById("cat6").addEventListener("click", function () {
+        window.location.href = "Spices&OilsPage.html";
+      });
+
+      document.getElementById("cat7").addEventListener("click", function () {
+        window.location.href = "ProteinPage.html";
+      });
+
+      document.getElementById("cat8").addEventListener("click", function () {
+        window.location.href = "GrainsPage.html";
+      });
+
+    </script>
+  </body>
+</html>

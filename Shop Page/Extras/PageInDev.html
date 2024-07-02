@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="description"
+      content="This page is under development. It will be available to public/customers after official announcement. "
+    />
+    <meta
+      name="keywords"
+      content="KiranaStation, grocery store, organic, buy, grocery"
+    />
+    <meta
+      name="author"
+      content="Pragun Raj Maskey, Aaditya Bhattarai, Soumyata Shakya, Aarati Dhakal"
+    />
+    <title>Kirana Station - Fruits</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Anek+Malayalam:wght@100..800&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+      /* body css */
+      body {
+        zoom: 100%;
+        background-image: url(../images/site-background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+      }
+
+      .oops-container {
+        background-color: #d9d9d9;
+        padding: 20px;
+        height: 480px;
+        width: 1500px;
+        max-width: 60%;
+        margin: auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50px;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      h1,
+      p,
+      .returnhome {
+        margin: 0;
+        font-family: "Anonymous Pro", monospace;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+        text-shadow: 0px 2px 10px #8da480;
+        transition: all 0.25s ease;
+        margin-bottom: 10px; /* Add vertical spacing between elements */
+      }
+
+      .returnhome:hover {
+        color: #6d9655;
+        text-decoration: underline;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/1fb25901b5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="site-logo" style="flex-grow: 1">
+        <img src="../../Images/SiteLogo.png" height="55px" />
+      </div>
+
+      <nav>
+        <a href="../../index.html">Home </a>
+        <a href="../../Shop Page/shop/FruitsPage.html"
+          >Shop
+        </a>
+        <a href="../../research.html">Research</a>
+        <a href="../../blog.html">Blog</a>
+        <a href="../../aboutus.html">About Us</a>
+      </nav>
+
+      <div class="right-header">
+        <div class="search-container">
+          <input type="text" />
+          <button type="submit" onclick="window.location.href = './pageInDev.html';">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="icon">
+          <button
+            class="account-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/accounticon.png" />
+          </button>
+          <button
+            class="wishlist-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/wishlisticon.png" />
+          </button>
+          <button
+            class="cart-icon"
+            onclick="window.location.href = '/Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="../../Images/carticon.png" />
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="oops-container">
+      <div class="content">
+        <h1>Oops..</h1>
+        <p>The page you are looking for is still under development</p>
+        <a class="returnhome" href="/index.html">Return to home page.</a>
+      </div>
+    </div>
+  </body>
+</html>

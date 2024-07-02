@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta tags for defining document properties -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page features article(s) related to grocery and technology. "
+    />
+    <meta
+      name="keywords"
+      content="KiranaStation, grocery store, organic, buy, grocery, blog"
+    />
+    <meta
+      name="author"
+      content="Pragun Raj Maskey, Aaditya Bhattarai, Soumyata Shakya, Aarati Dhakal"
+    />
+    <!--Title of the page -->
+    <title>Kirana Station - Blogs</title>
+    <!--External stylesheet link -->
+    <link rel="stylesheet" href="style.css" />
+    <!--Font Awesome script for icons-->
+    <script
+      src="https://kit.fontawesome.com/1fb25901b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--Internal styles-->
+    <style>
+      /* CSS styles for various elements*/
+      #blog {
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .blog-heading {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .blog-heading span {
+        display: block;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .blog-heading h3 {
+        font-size: 36px;
+        color: #7eb06a;
+        margin-top: 10px;
+      }
+
+      .blog-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .blog-box {
+        background: #fff;
+        margin: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(33% - 40px);
+        box-sizing: border-box;
+        transition: transform 0.3s;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .blog-box:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Decrease image size */
+      .blog-img img {
+        max-width: 200px; /* Set maximum width for the image */
+        height: auto; /* Maintain aspect ratio */
+        object-position: center;
+        border-radius: 10px;
+      }
+
+      /* Style text for better readability */
+      .blog-text {
+        padding: 20px; /* Add padding for better spacing */
+        background-color: #f9f9f9; /* Add a light background color */
+        border-radius: 8px; /* Add rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+        flex: 1; /* Allow the text to take up remaining space */
+        margin-top: 20px;
+      }
+
+      .blog-text h4 {
+        margin-top: 0; /* Remove top margin for heading */
+        color: #333; /* Set text color */
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .blog-text p {
+        color: #666; /* Set text color */
+        line-height: 1.6; /* Increase line height for better readability */
+      }
+      .blog-text {
+        border: 1px solid #ccc; /* Add a border around the content */
+        padding: 20px; /* Add padding for spacing */
+        border-radius: 8px; /* Add rounded corners */
+      }
+      .blog-box {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Arrange items vertically */
+        align-items: center; /* Center horizontally */
+        text-align: center; /* Center text */
+      }
+      .blog-img {
+        flex: 0 0 auto; /* Ensure the image doesn't grow */
+        margin-bottom: 20px; /* Add space between the image and text */
+        flex: 0 0 auto; /* Ensure the image doesn't grow */
+      }
+      .blog-img img {
+        max-width: 100%; /* Set maximum width for the image */
+        height: auto; /* Maintain aspect ratio */
+      }
+      /* Add or adjust these CSS styles in your style.css file */
+
+      .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .blog-img {
+        flex: 0 0 auto;
+        margin-bottom: 20px;
+        height: 250px;
+      }
+
+      .blog-img img {
+        width: 100%;
+        max-width: 300px; /* Increase maximum width for the image */
+        height: auto;
+        object-position: center top; /* Align image to the center and top */
+      }
+
+      .blog-text {
+        text-align: center; /* Center text */
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-text h4 {
+        margin-top: 0;
+        color: #333;
+      }
+
+      .blog-text p {
+        color: #666;
+        line-height: 1.6;
+      }
+      #blog {
+        padding: 50px 0;
+      }
+
+      .blog-heading {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .blog-box {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(33.33% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      .blog-box.conclusion {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Header Section-->
+    <header>
+      <div class="site-logo" style="flex-grow: 1">
+        <img src="./images/SiteLogo.png" height="55px" />
+      </div>
+      <!--Navigation menu-->
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Shop Page/shop/FruitsPage.html">Shop</a>
+        <a href="./research.html">Research</a>
+        <a href="./blog.html"
+          >Blog
+          <div class="anchor-highlight"></div
+        ></a>
+        <a href="./aboutus.html">About Us</a>
+      </nav>
+
+      <div class="right-header">
+        <div class="search-container">
+          <input type="text" />
+          <button
+            type="submit"
+            onclick="window.location.href = '../extras/pageInDev.html';"
+          >
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="icon">
+          <button
+            class="account-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/accounticon.png" />
+          </button>
+          <button
+            class="wishlist-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/wishlisticon.png" />
+          </button>
+          <button
+            class="cart-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/carticon.png" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="main-body" style="background-color: #dcebd8">
+      <section id="blog">
+        <!--heading-->
+        <div class="blog-heading">
+          <span>GET TO KNOW MORE</span>
+          <h3>About Grocery Technology</h3>
+        </div>
+
+        <!--blog-container-->
+        <div class="blog-container">
+          <!-- Each blog box -->
+          <div
+            class="blog-box"
+            style="
+              background-image: url('./Images/blogbg.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              filter: blur(50%);
+              height: 400px;
+            "
+          >
+            <div
+              class="blog-text"
+              style="
+                backdrop-filter: blur(7px);
+                background-color: #627e5278;
+                height: 80%;
+              "
+            >
+              <h4 style="color: #fff">Grocery Technology</h4>
+              <p style="color: #fff">
+                Grocery technology includes a range of tools and creations with
+                the goal of improving and streamlining the grocery shopping
+                experience for consumers as well as retailers.Grocery technology
+                have had an immensely beneficial power, making the shopping
+                experience for consumers and boosting operational efficiency for
+                companies.<br /><br />
+                Grocery technology is transforming the way consumers shop and
+                grocery companies operate. In grocery technology, customers can
+                browse through the website to order any product and also
+                schedule deliveries and pickups. Grocery technology is more
+                efficient and sustainable.
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more blog boxes for different topics -->
+          <section id="blog">
+            <!--heading-->
+            <div class="blog-heading">
+              <span>POSITIVE AND NEGATIVE IMPACT</span>
+              <h3>About Grocery Technology</h3>
+            </div>
+
+            <!--blog-container-->
+            <div class="blog-container">
+              <!-- Each blog box -->
+              <div class="blog-box">
+                <div class="blog-img">
+                  <img src="./Images/blog2.jpg" alt="Blog" />
+                </div>
+                <div class="blog-text" style="height: 425px">
+                  <h4>Positive Impact Of Technology In Grocery</h4>
+                  <p>
+                    The introduction of technology in the grocery business
+                    drastically enhanced the shopping experience, efficiency,
+                    and convenience for consumers as well as businesses. Grocers
+                    may now maintain abundant stock levels with innovative
+                    inventory management systems and data analytics, decreasing
+                    waste and increasing product availability. Customers can
+                    purchase from the comfort of their own homes, schedule
+                    deliveries, and take advantage of tailored services through
+                    e-commerce and mobile applications. Furthermore,
+                    advancements such as self-checkout systems, automated
+                    warehouses, and AI-driven assistance for customers have
+                    simplified processes, dropped costs, and reduced human
+                    error, leading to a more sustainable and customer-centric
+                    retail organization.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Each blog box -->
+              <div class="blog-box">
+                <div class="blog-img">
+                  <img src="./Images/blog3.webp" alt="Blog" />
+                </div>
+                <div class="blog-text">
+                  <h4>Negative Impact Of Technology In Grocery</h4>
+                  <p>
+                    While technology has revolutionized the grocery industry, it
+                    also brings several negative impacts. The increased reliance
+                    on automation and digital systems can lead to job
+                    displacement, reducing employment opportunities for
+                    cashiers, stock clerks, and other grocery store workers.
+                    Small, independent grocers may struggle to compete with
+                    larger chains that can afford the latest technological
+                    advancements, potentially leading to reduced market
+                    diversity. Additionally, the collection and use of consumer
+                    data for personalized marketing and inventory management
+                    raise privacy concerns, as customers may not always be aware
+                    of how their information is being used. Lastly, the digital
+                    divide means that some consumers, particularly the elderly
+                    or those in low-income areas, may find it challenging to
+                    adapt to online shopping platforms and self-checkout
+                    systems, exacerbating inequality in access to essential
+                    services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Conclusion box -->
+          <div class="blog-box conclusion">
+            <div class="blog-text">
+              <h4>Conclusion</h4>
+              <p>
+                In conclusion, while grocery technology offers various benefits
+                such as convenience, efficiency, and improved customer service,
+                it also offers issues such as work displacement, privacy
+                concerns, and higher levels of inequality. As result,
+                individuals in the grocery industry must carefully analyze and
+                manage these issues to ensure that technological improvements
+                benefit both customers and businesses while limiting negative
+                social consequences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-container">
+        <div class="left-footer">
+          <img src="./Images/SiteLogo.png" alt="siteLogo" />
+          <p>
+            <b>KiranaStation</b> is an ecommerce grocery website designed to
+            satisfy your needs to find healthy, organic, pesticide free
+            vegetables and fruits right at your door steps without any hastle.
+            Choose how your pantry looks from our store. We make it fast easy
+            and convinient.
+          </p>
+          <h2>Follow Us</h2>
+          <section class="followUs">
+            <a><i class="fa fa-facebook"></i></a>
+            <a><i class="fa fa-twitter"></i></a>
+            <a><i class="fa fa-instagram"></i></a>
+            <a><i class="fa fa-youtube"></i></a>
+            <a><i class="fa fa-pinterest"></i></a>
+          </section>
+        </div>
+        <div class="quicklink">
+          <h2>Quick Links<br /></h2>
+          <div>
+            <a href="/index.html">Home</a>
+            <a href="/Shop Page/shop/FruitsPage.html">Shop Now</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/research.html">Research Page</a>
+            <a href="/aboutus.html">About Us</a>
+            <a href="/Shop Page/Extras/PageInDev.html">Log In</a>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <h2>Contacts</h2>
+          <div>
+            <section>
+              <h3><i class="fa fa-location-dot"></i>&nbsp;&nbsp;Address</h3>
+              <p>Lazimpat Marg, Kathmandu, Nepal</p>
+            </section>
+            <section>
+              <h3><i class="fa fa-phone"></i>&nbsp;&nbsp;Phone</h3>
+              <p>+977 971-2525-767</p>
+            </section>
+            <section>
+              <h3><i class="fa fa-envelope"></i>&nbsp;&nbsp;Mail Us</h3>
+              <a href="mailto:customerservice@kiranastation.com"
+                >customerservice@KiranaStation.com</a
+              >
+            </section>
+          </div>
+        </div>
+        <div class="right-footer">
+          <h2>Payment Methods</h2>
+          <section class="payments">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-paypal"></i>
+            <i class="fa-brands fa-google-pay"></i>
+          </section>
+          <div id="line"></div>
+          <h2 id="map">Google Maps</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3118409609833!2d85.32266147546738!3d27.70765647618234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1714233716877!5m2!1sen!2snp"
+            width="360 "
+            height="190"
+            style="border: 2px solid black; filter: grayscale(0%)"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </footer>
+      <!--Bottom footer section -->
+      <section class="bottom-footer">
+        <p>
+          &copy; 2020-2024&nbsp;&nbsp;KiranaStation.&nbsp;&nbsp;All Rights
+          Reserved.
+        </p>
+        <div>
+          <a>Terms and Conditions</a>
+          <a>Cookie Policy</a>
+          <a>Privacy Policy</a>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

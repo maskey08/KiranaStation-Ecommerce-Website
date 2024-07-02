@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page represents a comprehensive webpage for KiranaStation, an online grocery store. It includes the basic information about the e-commerce website. "
+    />
+    <meta
+      name="keywords"
+      content="KiranaStation, grocery store, organic, buy, grocery"
+    />
+    <meta
+      name="author"
+      content="Pragun Raj Maskey, Aaditya Bhattarai, Soumyata Shakya, Aarati Dhakal"
+    />
+    <title>Kirana Station - Home</title>
+    <script
+      src="https://kit.fontawesome.com/1fb25901b5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .slider {
+        width: 100%;
+        height: 75vh;
+        overflow: hidden;
+      }
+      .slides {
+        width: 500%;
+        height: 97%;
+        display: flex;
+      }
+      .slides input {
+        display: none;
+      }
+      .slide {
+        width: 20%;
+        transition: 2s;
+        position: relative;
+      }
+      .slide img {
+        height: 100%;
+        width: fit-content;
+      }
+      .invisible {
+        position: absolute;
+        bottom: 167px;
+        left: 90px;
+        opacity: 0%;
+      }
+      .invisible button {
+        padding: 16px 100px;
+      }
+
+      #radio1:checked ~ .first {
+        margin-left: 0;
+      }
+      #radio2:checked ~ .first {
+        margin-left: -20%;
+      }
+      #radio3:checked ~ .first {
+        margin-left: -40%;
+      }
+      #radio4:checked ~ .first {
+        margin-left: -60%;
+      }
+
+      .navigation-auto {
+        position: absolute;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+        margin-top: 66vh;
+        margin-left: 50%;
+      }
+      .navigation-auto div {
+        border: 1px solid #8fa97f;
+        padding: 4px;
+        border-radius: 50%;
+        transition: 1s;
+      }
+
+      .navigation-auto div:not(:last-child) {
+        margin-right: 7px;
+      }
+      #radio1:checked ~ .navigation-auto .auto-btn1 {
+        background: #8fa97f;
+      }
+      #radio2:checked ~ .navigation-auto .auto-btn2 {
+        background: #8fa97f;
+      }
+      #radio3:checked ~ .navigation-auto .auto-btn3 {
+        background: #8fa97f;
+      }
+      #radio4:checked ~ .navigation-auto .auto-btn4 {
+        background: #8fa97f;
+      }
+
+      /* features */
+      .feature-container {
+        background-color: #627e52;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        height: 185px;
+        transform: translate(0, -15%);
+        box-shadow: 0 -4px 10px #2e2828;
+      }
+      .features {
+        display: flex;
+        color: #fff;
+        transform: translate(0, -90%);
+        padding-inline: 100px;
+        padding-block: 8vh;
+        justify-content: center;
+      }
+      .f {
+        display: flex;
+        border-right: 2px solid white;
+        padding: 15px 0px;
+        column-gap: 20px;
+      }
+      .f i {
+        padding-left: 50px;
+      }
+      .f1 p {
+        font-size: small;
+        padding-top: 5px;
+        padding-right: 10px;
+        max-width: 350px;
+      }
+      #filter {
+        opacity: 10%;
+        width: 100%;
+      }
+
+      /*edeals*/
+      .exclusive-deals {
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 50px;
+        position: relative;
+        border-bottom: 1px solid #bdb5b5;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        box-shadow: 0 10px 15px #d1c7c7;
+      }
+      .sale-timer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff4d4d;
+        color: #fff;
+        box-shadow: 0 0 5px black;
+        padding: 10px 15px;
+        border-radius: 50px;
+        width: 250px;
+      }
+
+      #seeAll {
+        color: #000;
+      }
+      #seeAll:hover {
+        color: blue;
+      }
+      .product-cards {
+        display: flex;
+        overflow-x: hidden;
+        gap: 1rem;
+        scroll-behavior: smooth;
+      }
+
+      .product-card {
+        position: relative;
+        background: #ededed;
+        margin: 16px;
+        margin-right: 0;
+        padding: 16px;
+        padding-bottom: 0;
+        width: 17vw;
+        height: 48vh;
+        border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .product-card:hover {
+        box-shadow: 0 0 15px black;
+      }
+
+      .discount {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ff4d4d;
+        color: #fff;
+        padding: 0.5rem;
+        font-weight: bold;
+        border-radius: 30px;
+      }
+      .favouriter {
+        position: absolute;
+        font-size: 25px;
+        bottom: 10px;
+        right: 15px;
+      }
+      .favouriter .fas {
+        color: red;
+      }
+      .favouriter:hover {
+        font-size: 30px;
+        transition: 0.5s;
+      }
+
+      .product-card img {
+        width: 17vw;
+        aspect-ratio: 1/1;
+        padding-bottom: 15px;
+        border-radius: 25px;
+      }
+
+      .prices {
+        align-items: center;
+        margin-top: 16px;
+      }
+
+      .original-price {
+        text-decoration: line-through;
+        color: #888;
+      }
+
+      .discounted-price {
+        font-weight: bold;
+        color: #ff4d4d;
+      }
+
+      .cart {
+        position: absolute;
+        bottom: 10px;
+        left: 25px;
+        font-size: 24px;
+      }
+
+      .cart:hover {
+        font-size: 25px;
+        transition: 0.5s;
+      }
+
+      #leftButton,
+      #rightButton {
+        font-size: 40px;
+        color: #00000078;
+        position: absolute;
+        top: 110px;
+        padding-inline: 15px;
+        padding-block: 200px;
+      }
+
+      #leftButton:hover,
+      #rightButton:hover {
+        font-size: 45px;
+        color: rgb(0, 0, 0);
+      }
+      .fa-chevron-right {
+        right: 0;
+      }
+      .fa-chevron-left {
+        left: 0;
+      }
+
+      .alert {
+        position: absolute;
+        display: none;
+        font-size: large;
+        font-weight: bold;
+        background-color: #7aac6c;
+        padding: 15px 20px;
+        border-radius: 25px;
+        left: 43%;
+        bottom: 80%;
+      }
+      /* edeals end */
+
+      /* categories section */
+      .categories {
+        padding: 10px 200px 40px 200px;
+      }
+      .categories h1 {
+        text-align: center;
+        font-size: 25px;
+        padding: 25px;
+        padding-bottom: 40px;
+      }
+      .category-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        border: 2px solid rgba(174, 164, 164, 0.686);
+        border-radius: 25px;
+        padding: 30px;
+        background-color: #f6f8f5;
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.77);
+      }
+      .category-container div {
+        padding: 25px;
+        position: relative;
+        background-color: #ebf0e8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        border: 1px solid rgba(197, 180, 180, 0.57);
+        border-radius: 25px;
+      }
+      .category-container div:hover {
+        box-shadow: 0 0 10px grey;
+      }
+      .category-container p {
+        position: absolute;
+        bottom: 25px;
+        font-weight: bold;
+        color: #6b6b6b;
+      }
+      /* categories section end*/
+      /* description section */
+      .description {
+        background-color: #b7c9ac;
+        padding: 80px 200px;
+      }
+      .description h1 {
+        text-align: center;
+        font-size: 25px;
+        padding-inline: 25px;
+        padding-bottom: 25px;
+      }
+      #goToAboutus {
+        color: #000;
+        position: relative;
+        right: 0;
+      }
+      #goToAboutus:hover {
+        color: #fff;
+      }
+      .content th {
+        padding: 25px;
+        text-align: left;
+      }
+      .content td {
+        padding: 45px 25px;
+        text-align: justify;
+      }
+      .research-link {
+        padding-top: 10px;
+        padding-left: 25px;
+      }
+      .research-link a {
+        text-decoration: underline;
+      }
+      .research-link a:hover {
+        color: blue;
+      }
+      .content tr td a button {
+        padding: 15px 20px;
+        border-radius: 25px;
+        background-color: #ebf0e8;
+      }
+      .content tr td a button:hover {
+        background-color: #334833;
+        color: #fff;
+      }
+      /* description section ends*/
+      /* faq section */
+      .faq {
+        padding: 80px 200px 30px 200px;
+      }
+      .faq h1 {
+        padding-bottom: 25px;
+      }
+      .qn-container {
+        margin-bottom: 10px;
+        border: 1px solid black;
+        padding: 25px 25px;
+      }
+      .qn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .answer {
+        padding-top: 15px;
+        display: none;
+      }
+      .qn i {
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .fa-plus:hover {
+        background-color: #dad6d69e;
+      }
+      /* faq section ends */
+      .goMembership {
+        padding: 15px 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #7aac6c;
+      }
+      .goMembership button {
+        padding: 7px 25px;
+        border-radius: 25px;
+        background-color: #e1ecde;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="index">
+      <div class="site-logo" style="flex-grow: 1">
+        <img src="./images/SiteLogo.png" height="55px" />
+      </div>
+      <nav>
+        <a href="#index"
+          >Home
+          <div class="anchor-highlight"></div
+        ></a>
+        <a href="./Shop Page/shop/FruitsPage.html">Shop</a>
+        <a href="./research.html">Research</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./aboutus.html">About Us</a>
+      </nav>
+
+      <div class="right-header">
+        <div class="search-container">
+          <input type="text" />
+          <button
+            type="submit"
+            onclick="window.location.href = '../extras/pageInDev.html';"
+          >
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="icon">
+          <button
+            class="account-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/accounticon.png" />
+          </button>
+          <button
+            class="wishlist-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/wishlisticon.png" />
+          </button>
+          <button
+            class="cart-icon"
+            onclick="window.location.href = '../Shop Page/Extras/pageInDev.html';"
+          >
+            <img src="./images/carticon.png" />
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="main-body">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <div class="slide first" style="display: flex">
+            <img src="./Images/1.jpg" alt="deal1" />
+            <a class="invisible" href="./Shop Page/shop/FruitsPage.html"
+              ><button>Shop Now</button></a
+            >
+            <a
+              class="invisible"
+              style="left: 400px"
+              href="/Shop Page/Extras/PageInDev.html"
+              ><button>Deliver Now</button></a
+            >
+          </div>
+          <div class="slide">
+            <img src="./Images/2.jpg" alt="deal2" />
+            <a
+              class="invisible"
+              style="transform: translate(470%, -10%); top: 250px"
+              href="/Shop Page/shop/SnacksPage.html"
+              ><button>Deliver</button></a
+            >
+          </div>
+          <div class="slide">
+            <img src="./Images/3.jpeg" alt="deal3" />
+            <a
+              class="invisible"
+              style="bottom: 300px; left: 50px"
+              href="/Shop Page/shop/SnacksPage.html"
+              ><button style="padding-inline: 70px">Shop Now</button></a
+            >
+            <a
+              class="invisible"
+              style="left: 270px; bottom: 300px"
+              href="https://www.baskinrobbins.com/"
+              ><button style="padding-inline: 70px">Deliver Now</button></a
+            >
+          </div>
+          <div class="slide">
+            <img src="./Images/2.jpg" alt="deal2" />
+            <a
+              class="invisible"
+              style="transform: translate(470%, -10%); top: 250px"
+              href="/Shop Page/shop/SnacksPage.html"
+              ><button>Deliver</button></a
+            >
+          </div>
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+            <div class="auto-btn4"></div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-container">
+        <img src="./Images/feature-filter.png" id="filter" alt="filter-img" />
+        <div class="features">
+          <div class="f">
+            <i class="fa fa-seedling fa-5x"></i>
+            <div class="f1">
+              <h3 style="padding-top: 10px">100% ORGANIC</h3>
+              <p>
+                Enjoy the abundance of nature in its purest form with our 100%
+                organic products, which are devoid of additives and
+                preservatives.
+              </p>
+            </div>
+          </div>
+          <span
+            style="
+              height: 8px;
+              width: 9px;
+              border-radius: 50%;
+              background-color: white;
+              transform: translate(-60%, -5%);
+            "
+          ></span>
+          <div class="f">
+            <i class="fa fa-truck-fast fa-5x"></i>
+            <div class="f1">
+              <h3 style="padding-top: 10px">FAST HOME DELIVERY</h3>
+              <p>
+                Experience the convenience of lightning-fast deliveries straight
+                to your doorstep, saving you time and effort.
+              </p>
+            </div>
+          </div>
+          <span
+            style="
+              height: 8px;
+              width: 9px;
+              border-radius: 50%;
+              background-color: white;
+              transform: translate(-60%, 1300%);
+            "
+          ></span>
+          <div class="f" style="border: 0">
+            <i class="fa fa-credit-card fa-5x" alt="creedit_card"></i>
+            <div class="f1">
+              <h3 style="padding-top: 10px">SAFE PAYMENT</h3>
+              <p>
+                Enjoy a hassle-free checkout process with our user-friendly and
+                secure payment options, making transactions a breeze.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="exclusive-deals">
+        <h1>FLASH SALES</h1>
+        <div
+          style="
+            padding-block: 20px;
+            margin-inline: 50px;
+            display: flex;
+            justify-content: space-between;
+          "
+        >
+          <div class="sale-timer">
+            <strong>ENDING IN </strong>
+            <section>
+              <span id="hour"></span> hr : <span id="minute"></span> min :
+              <span id="second"></span> sec
+            </section>
+          </div>
+          <a href="./Shop Page/shop/FruitsPage.html" id="seeAll"
+            >See All Products</a
+          >
+        </div>
+        <div class="product-cards" id="product-cards">
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f1" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/sunflowerOil.jpg" alt="Product 1 Image" />
+            <h3>SUNFLOWER OIL</h3>
+            <div class="prices">
+              <span class="original-price">Rs.350</span>
+              <span class="discounted-price">Rs.80</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c1" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f2" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/mutton.jpg" alt="Product 2 Image" />
+            <h3>MUTTON</h3>
+            <div class="prices">
+              <span class="original-price">Rs.1400</span>
+              <span class="discounted-price">Rs.150</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c2" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f3" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/watermelon.jpg" alt="Product 3 Image" />
+            <h3>WATERMELON</h3>
+            <div class="prices">
+              <span class="original-price">Rs.150</span>
+              <span class="discounted-price">Rs.50</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c3" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f4" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/rice.jpg" alt="Product 4" />
+            <h3>RICE</h3>
+            <div class="prices">
+              <span class="original-price">Rs.1250</span>
+              <span class="discounted-price">Rs.100</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c4" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f5" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/mustard.webp" alt="Product 4" />
+            <h3>MUSTURED OIL</h3>
+            <div class="prices">
+              <span class="original-price">Rs.360</span>
+              <span class="discounted-price">Rs.30</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c5" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f6" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/sausage.jpg" alt="Product 4" />
+            <h3>SAUSAGES</h3>
+            <div class="prices">
+              <span class="original-price">Rs.400</span>
+              <span class="discounted-price">Rs.70</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c6" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="discount">-75%</div>
+            <div class="favouriter">
+              <i onclick="favourites(id)" id="f7" class="far fa-heart"></i>
+            </div>
+            <img src="./Images/rajma.jpg" alt="Product 7" />
+            <h3>RAJMA</h3>
+            <div class="prices">
+              <span class="original-price">Rs.400</span>
+              <span class="discounted-price">Rs.800</span>
+            </div>
+            <div class="cart">
+              <i onclick="cartAdd(id)" id="c7" class="fa fa-cart-plus"></i>
+            </div>
+          </div>
+        </div>
+        <i
+          onclick="scrollProductsLeft()"
+          id="leftButton"
+          class="fas fa-chevron-left"
+        ></i>
+        <i
+          onclick=" scrollProductsRight()"
+          id="rightButton"
+          class="fas fa-chevron-right"
+        ></i>
+        <div class="alert" id="add">Added to Favourites!</div>
+        <div class="alert" id="remove">Removed from Favourites!</div>
+        <div class="alert" id="cadd">Added to Cart!</div>
+        <div class="alert" id="cremove">Removed from Cart!</div>
+      </section>
+      <section class="categories">
+        <h1>CATEGORIES</h1>
+        <div
+          class="category-container"
+          style="
+            scale: 0.85;
+            background-image: url('./Shop Page/images/site-background.png');
+            background-size: cover;
+          "
+        >
+          <div
+            id="category1"
+            onclick="window.location.href= './Shop Page/shop/FruitsPage.html'"
+          >
+            <img src="./Images/fruits.png" width="125px" alt="categoryImage" />
+            <p>Fruits</p>
+          </div>
+          <div
+            id="category2"
+            onclick="window.location.href = './Shop Page/shop/VeggiesPage.html'"
+          >
+            <img src="./Images/veg.png" width="125px" alt="categoryImage" />
+            <p>Vegitables</p>
+          </div>
+          <div
+            id="category3"
+            onclick="window.location.href= './Shop Page/shop/Spices&OilsPage.html'"
+          >
+            <img src="./Images/spices.png" width="125px" alt="categoryImage" />
+            <p>Oils and Spices</p>
+          </div>
+          <div
+            id="category4"
+            onclick="window.location.href= './Shop Page/shop/GrainsPage.html'"
+          >
+            <img
+              src="./Images/category1.png"
+              width="125px"
+              alt="categoryImage"
+            />
+            <p>Grains</p>
+          </div>
+          <div
+            id="category5"
+            onclick="window.location.href= './Shop Page/shop/SnacksPage.html'"
+          >
+            <img src="./Images/snacks.png" width="125px" alt="categoryImage" />
+            <p>Snacks</p>
+          </div>
+          <div
+            id="category6"
+            onclick="window.location.href= './Shop Page/shop/DairiesPage.html'"
+          >
+            <img src="./Images/dairy.png" width="125px" alt="categoryImage" />
+            <p>Dairy</p>
+          </div>
+          <div
+            id="category7"
+            onclick="window.location.href= './Shop Page/shop/BeveragesPage.html'"
+          >
+            <img src="./Images/drinks.png" width="125px" alt="categoryImage" />
+            <p>Drinks</p>
+          </div>
+          <div
+            id="category8"
+            onclick="window.location.href= './Shop Page/shop/ProteinPage.html'"
+          >
+            <img src="./Images/meats.png" width="125px" alt="categoryImage" />
+            <p>Meat</p>
+          </div>
+        </div>
+      </section>
+      <section class="description">
+        <h1>What is KiranaStation?</h1>
+        <table class="content" border="0">
+          <tr>
+            <td colspan="2">
+              <center>
+                <p>
+                  Welcome to KiranaStation, your ultimate destination for all
+                  your grocery needs! At KiranaStation, we're passionate about
+                  bringing the freshest produce straight from the farm to your
+                  doorstep. Say goodbye to long queues and crowded aisles – with
+                  just a few clicks, you can order everything you need and have
+                  it delivered right to your door, hassle-free. Experience the
+                  convenience of online shopping like never before with
+                  KiranaStation. Whether you're stocking up on essentials,
+                  exploring new recipes, or indulging in your favorite treats,
+                  we're here to make your grocery shopping experience effortless
+                  and enjoyable. Join us today and discover the joy of
+                  farm-fresh goodness delivered straight to your door!
+                </p>
+                <br />
+                <a href="/aboutus.html" id="goToAboutus">Learn More >></a>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td width="50%">
+              <h4>Changing Grocery Shopping with Technology</h4>
+              <br />
+              <p>
+                KiranaStation exemplifies how technology has revolutionized the
+                way we shop for groceries, bringing convenience, accessibility,
+                security, and innovation to the forefront of the consumer
+                experience. By embracing these technological advancements, your
+                website is not only reshaping the grocery industry but also
+                enriching the lives of customers by simplifying their daily
+                routines.
+              </p>
+              <br />
+              <a href="/blog.html"><button>Dive into Articles >></button></a>
+            </td>
+            <td width="50%">
+              <h4>Meet Our Team & Experience</h4>
+              <br />
+              <p>
+                Meet the team at KiranaStation, the driving force behind our
+                mission to redefine grocery shopping. With a focus on leveraging
+                technology, we bring fresh produce from the farm to your
+                doorstep, ensuring convenience, accessibility, and security in
+                every transaction. Explore our website to discover a wide
+                selection of quality groceries and experience the seamless
+                convenience of online shopping. Welcome to KiranaStation, where
+                innovation meets simplicity, enriching your daily routine one
+                delivery at a time.
+              </p>
+              <br /><a href="/aboutus.html"
+                ><button>For More Info >></button></a
+              >
+            </td>
+          </tr>
+        </table>
+        <div class="research-link">
+          Want to know how we built our website?
+          <a href="/research.html">Click here</a>
+        </div>
+      </section>
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <div class="qn-container">
+          <span class="qn">
+            <h4>
+              How does KiranaStation ensure the freshness of its products?
+            </h4>
+            <i class="fa fa-plus" onclick="showAnswer('q1')"></i>
+          </span>
+          <div id="q1" class="answer">
+            We have established partnerships with local farmers and suppliers to
+            source the freshest ingredients directly. Our stringent quality
+            control measures ensure that only the best produce reaches our
+            customers.
+          </div>
+        </div>
+        <div class="qn-container">
+          <span class="qn">
+            <h4>What payment methods does KiranaStation accept?</h4>
+            <i class="fa fa-plus" onclick="showAnswer('q2')"></i>
+          </span>
+          <div id="q2" class="answer">
+            KiranaStation accepts various secure payment methods, including
+            credit/debit cards, net banking, and mobile wallets. Your
+            transactions are encrypted and secured to ensure your peace of
+            mind.<br /><br />
+            *Note: We also accept Cash On Delivery(COD)!
+          </div>
+        </div>
+        <div class="qn-container">
+          <span class="qn">
+            <h4>How does KiranaStation handle returns or exchanges?</h4>
+            <i class="fa fa-plus" onclick="showAnswer('q3')"></i>
+          </span>
+          <div id="q3" class="answer">
+            We strive to provide the best shopping experience for our customers.
+            If you're not satisfied with your purchase, please contact our
+            customer support team within 30 days. We'll be happy to assist you
+            with returns or exchanges. However, vegetables and fruits must be
+            returned within 10 days.
+          </div>
+        </div>
+        <div class="qn-container">
+          <span class="qn">
+            <h4>Can I schedule a delivery for a specific date and time?</h4>
+            <i class="fa fa-plus" onclick="showAnswer('q4')"></i>
+          </span>
+          <div id="q4" class="answer">
+            Yes, KiranaStation offers the flexibility to schedule your delivery
+            for a specific date and time that is convenient for you. During the
+            checkout process, you can choose your preferred delivery slot.
+          </div>
+        </div>
+        <div class="qn-container">
+          <span class="qn">
+            <h4>How can I track my order?</h4>
+            <i class="fa fa-plus" onclick="showAnswer('q5')"></i>
+          </span>
+          <div id="q5" class="answer">
+            Once your order is confirmed, you will receive a tracking link via
+            email or SMS. You can use the link sent in there to track the status
+            of your delivery in real-time.
+          </div>
+        </div>
+      </section>
+      <section class="goMembership">
+        <p>Yes! Send me exclusive offers and personalized tips for shopping!</p>
+        <button onclick="window.location.href='./aboutus.html#membershipform'">
+          Apply Membership
+        </button>
+      </section>
+    </div>
+    <footer class="footer-container">
+      <div class="left-footer">
+        <img src="./Images/SiteLogo.png" alt="siteLogo" />
+        <p>
+          <b>KiranaStation</b> is an ecommerce grocery website designed to
+          satisfy your needs to find healthy, organic, pesticide free vegetables
+          and fruits right at your door steps without any hastle. Choose how
+          your pantry looks from our store. We make it fast easy and convinient.
+        </p>
+        <h2>Follow Us</h2>
+        <section class="followUs">
+          <a><i class="fa fa-facebook"></i></a>
+          <a><i class="fa fa-twitter"></i></a>
+          <a><i class="fa fa-instagram"></i></a>
+          <a><i class="fa fa-youtube"></i></a>
+          <a><i class="fa fa-pinterest"></i></a>
+        </section>
+      </div>
+      <div class="quicklink">
+        <h2>Quick Links<br /></h2>
+        <div>
+          <a href="/index.html">Home</a>
+          <a href="/Shop Page/shop/FruitsPage.html">Shop Now</a>
+          <a href="/blog.html">Blog</a>
+          <a href="/research.html">Research Page</a>
+          <a href="/aboutus.html">About Us</a>
+          <a href="/Shop Page/Extras/PageInDev.html">Log In</a>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <h2>Contacts</h2>
+        <div>
+          <section>
+            <h3><i class="fa fa-location-dot"></i>&nbsp;&nbsp;Address</h3>
+            <p>Lazimpat Marg, Kathmandu, Nepal</p>
+          </section>
+          <section>
+            <h3><i class="fa fa-phone"></i>&nbsp;&nbsp;Phone</h3>
+            <p>+977 971-2525-767</p>
+          </section>
+          <section>
+            <h3><i class="fa fa-envelope"></i>&nbsp;&nbsp;Mail Us</h3>
+            <a href="mailto:customerservice@kiranastation.com"
+              >customerservice@KiranaStation.com</a
+            >
+          </section>
+        </div>
+      </div>
+      <div class="right-footer">
+        <h2>Payment Methods</h2>
+        <section class="payments">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-paypal"></i>
+          <i class="fa-brands fa-google-pay"></i>
+        </section>
+        <div id="line"></div>
+        <h2 id="map">Google Maps</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3118409609833!2d85.32266147546738!3d27.70765647618234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1714233716877!5m2!1sen!2snp"
+          width="360 "
+          height="190"
+          style="border: 2px solid black; filter: grayscale(0%)"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </footer>
+    <section class="bottom-footer">
+      <p>
+        &copy; 2020-2024&nbsp;&nbsp;KiranaStation.&nbsp;&nbsp;All Rights
+        Reserved.
+      </p>
+      <div>
+        <a>Terms and Conditions</a>
+        <a>Cookie Policy</a>
+        <a>Privacy Policy</a>
+      </div>
+    </section>
+    <script>
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById("radio" + counter).checked = true;
+        counter++;
+        if (counter > 4) {
+          counter = 1;
+        }
+      }, 3300);
+
+      function timer() {
+        const d = new Date();
+        let hour = d.getHours();
+        let min = d.getMinutes();
+        let sec = d.getSeconds();
+        document.getElementById("hour").innerHTML = 24 - hour;
+        document.getElementById("minute").innerHTML = 60 - min;
+        document.getElementById("second").innerHTML = 60 - sec;
+        setTimeout(timer, 1000);
+      }
+      timer();
+
+      function favourites(id) {
+        const element = document.getElementById(id); // Get the DIV element
+        element.classList.toggle("fas"); // Remove mystyle class from DIV
+
+        if (element.classList.contains("fas")) {
+          document.getElementById("add").style.display = "block";
+
+          setTimeout(function () {
+            document.getElementById("add").style.display = "none";
+          }, 1500);
+        } else {
+          document.getElementById("remove").style.display = "block";
+          setTimeout(function () {
+            document.getElementById("remove").style.display = "none";
+          }, 1500);
+        }
+      }
+
+      function cartAdd(id) {
+        var element = document.getElementById(id); // Get the DIV element
+        element.classList.toggle("fa-cart-arrow-down"); // toggle  mystyle class from DIV
+
+        if (element.classList.contains("fa-cart-arrow-down")) {
+          document.getElementById("cadd").style.display = "block";
+
+          setTimeout(function () {
+            document.getElementById("cadd").style.display = "none";
+          }, 1500);
+        } else {
+          document.getElementById("cremove").style.display = "block";
+          setTimeout(function () {
+            document.getElementById("cremove").style.display = "none";
+          }, 1500);
+        }
+      }
+
+      function scrollProductsLeft() {
+        document.getElementById("product-cards").scrollLeft -= 400;
+      }
+
+      function scrollProductsRight() {
+        document.getElementById("product-cards").scrollLeft += 400;
+      }
+
+      function showAnswer(ans) {
+        var element = document.getElementById(ans);
+        if (element.style.display == "none") {
+          element.style.display = "block";
+        } else {
+          element.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

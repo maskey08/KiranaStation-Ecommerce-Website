@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This page describes about KiranaStation and its history, team members with portfolio and form section."
+    />
+    <meta
+      name="keywords"
+      content="KiranaStation, grocery store, organic, buy, grocery"
+    />
+    <meta
+      name="author"
+      content="Pragun Raj Maskey, Aaditya Bhattarai, Soumyata Shakya, Aarati Dhakal"
+    />
+    <title>Kirana Station - About Us</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+      src="https://kit.fontawesome.com/1fb25901b5.js"
+      crossorigin="anonymous"
+    </script>
+     <link
+     rel="stylesheet"
+     href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"/>
+   <script
+     src="https://kit.fontawesome.com/1fb25901b5.js" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="style1.css"/>
+    <a href=""https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css""></a>
+    <style>
+      .main-body{
+        z-index: -99;
+      }
+      .first{
+        padding-bottom: 50px;
+      }
+      td {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      button {
+        cursor: pointer;
+        background-color: #6D8A5D;
+        color: white;
+        border: none;
+      }
+
+      button:hover {
+        background-color: #627e52;
+      }
+
+      .shopnow-button {
+        font-size: 16px;
+        border-radius: 25px;
+        padding: 15px 50px;
+      }
+
+      
+      .img1 img{
+        width: 600px;
+        height: 600px;
+        object-fit: cover;
+        position: relative;
+        top: 40px;
+      }
+      .td1 {
+        font-size: 60px;
+        font-weight: bold;
+        padding-bottom: 0;
+        padding-top: 50px;
+      }
+
+      .history{
+        background-color: #d5ddd6;
+        padding-bottom: 25px;
+      }
+
+      .p1 {
+        width: 700px;
+        padding-top: 30px;
+        position: relative;
+        bottom: 30px;
+        line-height: 28px;
+      }
+
+      .td2 {
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 55px;
+        position: relative;
+        bottom: 20px;
+      }
+
+      .img2 img {
+        height: 550px;
+        width: 700px;
+      }
+
+      .p2 {
+        position: relative;
+        top: 10px;
+        width: 620px;
+        line-height: 25px;
+      }
+
+     
+      .member {
+        padding: 100px 50px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 25px;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+     .member :hover {
+      background-color: #6D8A5D;
+      cursor: pointer;
+      color: white;
+      border: #627e52;
+     }  
+      .cell {
+        padding: 20px;
+        border: 1px solid rgb(181, 168, 168);
+        border-radius: 5px;
+        display: flex;
+        justify-content: right;
+        height: 125px;
+        width: 300px;
+        column-gap: 5px;
+        box-shadow: 0 0 10px gray;
+      } 
+     
+      .image-container img {
+        object-fit: cover;
+        height: 115px;
+        width: 115px;
+        border-radius: 50%;
+  
+      }
+      .member-info{
+        width: 300px;
+        padding-block: 15px;
+        padding-left: 5px;
+      }
+      .member h4 {
+        font-size: 19px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 25px;
+      }
+
+      .icons-logo{
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        padding-inline: 15px;
+      }
+      .icons-logo a :hover {
+        color: #465b39;
+        font-size: 30px;
+        text-decoration: underline;
+      }
+    
+/* testimonials css */
+      .checked {
+        color: #ffdf22;
+      }
+
+      .testimonials {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; 
+      }
+
+      .testimonial_container {
+        width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 25px;
+        margin-top: 8px;
+        cursor: pointer;
+      }
+      
+      .testimonial_image img {
+        object-fit: cover;
+        border-radius: 50%;
+        border: 10px solid #6D8A5D;
+        box-shadow: rgba(0, 0, 0, 0.17) 4px 4px 10px ;
+        z-index: 1;
+      }
+
+      .testimonial_review {
+        background-color: white;
+        padding: 95px 50px 40px 40px;
+        margin-top: -55px;
+        box-shadow: rgba(0, 0, 0, 0.17) 4px 4px 10px;
+        height: 280px;
+      }
+
+      .testimonial_review p {
+        line-height: 25px;
+        padding-top: 10px;
+      }
+
+      .testimonial_image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+      }
+      
+      .review-box p {
+        padding-bottom: 25px;
+        font-size: 27px;
+
+      }
+
+      .review-box {
+        background-color: #d5ddd6;
+        padding: 35px 50px;
+        margin-top: 10px;
+      }
+      .rate {
+        display: flex;      
+      }
+
+      .rate section {
+        padding-inline : 20px;
+        color:white;
+        font-size: 30px;
+      }
+     #feedback{
+      padding: 10px 20px;
+      border-radius: 25px;
+     }
+
+     .membershipform{
+      padding: 10px 80px;
+  
+     }
+     .form-box{
+      padding-block: 50px;
+      width: 1100px;
+     }
+    .form-box form input,select{
+      padding: 15px 20px;
+      font-size: 16px;
+      padding-right: 100%;
+     }
+     #name{
+      display: flex;
+      gap:15px;
+     }
+     #last,#first{
+      padding-right: 39%;
+     }
+
+
+     #membershipp {
+      padding: 10px 40px;
+      border-radius: 25px;
+      margin-top: 10px;
+     }
+
+     .infomembership {
+      background-color: #6D8A5D;
+      padding: 50px 80px;
+      color: rgb(210, 228, 203);
+     }
+
+     .infomembership{
+      line-height: 40px;
+     }
+     .get{
+      font-size: 30px;
+     }
+     .infomembership ul li{
+      font-size: 20px;
+     }
+      .cv{
+        margin: -30px 200px 80px 200px;
+        box-shadow: 0 0 10px rgb(0, 0, 0);
+        font-size: 23px;
+        display:none;
+      }
+      .info-of{
+        display: flex;
+        width:100%;
+        background-color: antiquewhite;
+        font-size: 30px;
+      }
+      .info-of img {
+        object-fit:contain;
+        margin: 40px;
+        border-radius: 50%;
+        border: 5px solid white;
+        background-color: #fff;
+      }
+      .cv-content{
+        display: flex;
+      }
+      #col1{
+        width: 320.5px;
+        background-color: rgb(180, 160, 160);
+        padding: 70px 9px 70px 35px;
+        color: white;
+      }
+      #profile{
+        padding-bottom: 100px;
+      }
+      .contact{
+        display: flex;
+        column-gap: 25px;
+      }
+      #col2{
+        padding: 70px 50px;
+      }
+      #col2 h2{
+        border-bottom: 1px solid black; 
+        width:600px;
+      }
+
+
+    </style>
+  </head>
+  
+<body>
+    <header>
+      <div class="site-logo" style="flex-grow: 1">
+        <img src="./images/SiteLogo.png" height="55px" />
+      </div>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./Shop Page/shop/FruitsPage.html">Shop</a>
+        <a href="./research.html">Research</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./aboutus.html">About Us<div class="anchor-highlight"></div></a>
+      </nav>
+
+      <div class="right-header">
+        <div class="search-container">
+            <input type="text"/>
+            <button type="submit" onclick="window.location.href = '../extras/pageInDev.html';">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        <div class="icons"></div>
+          <button class="icon" onclick="window.location.href = './Shop Page/Extras/PageInDev.html';"><img src="./images/accounticon.png"></button>
+          <button class="icon" onclick="window.location.href = './Shop Page/Extras/PageInDev.html';"><img src="./images/wishlisticon.png"></button>
+          <button class="icon" onclick="window.location.href = './Shop Page/Extras/PageInDev.html';"><img src="./images/carticon.png"></button>
+        </div>
+      </div>
+
+    </header>
+  <div class="main-body" id="aboutus">
+    <div class="first">
+      <table height = "690" width="100%" >
+        <tr height="40%">
+<!-- joining rows and columns -->
+          <td class = "td1" width="60%" height ="300px">
+            Provide Fresh,<br> Organic Food for<br> Everyone
+          </td>
+          <td class="img1" width = "40%" rowspan="3">
+            <img src ="./Images/freshvegetable.jpg" alt="image of food">
+          </td>
+        </tr>
+
+        <tr>
+          <td >
+            <p class="p1">
+              We provide best, fresh and organic food for our customers ensuring the best quality in reasonable price. We directly are in link with our local farmers who grow organic produce and raise animals humanely. We bring you the best while doing what is right for our global community. Our every product are organic and freshly-picked by our local farmers. We are dedicated to providing top-quality organic produce, meats, and other products that not only taste great but also leads to healthier lifestyle you are looking for.
+            </p>
+          </td>
+        </tr>
+<!--creating 1st button for shopnow-->
+        <tr>
+          <td>
+            <button type="button" onclick="window.location.href='./Shop Page/shop/FruitsPage.html'" class="shopnow-button">
+              Shop Now
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="history">
+      <table height ="690" width = "100%" >
+        <tr>
+          <td class="td2" height = "5px" colspan="2">
+            Our Journey from Farm to Table
+          </td>
+        </tr>
+
+        <tr>
+          <td class="img2" width="35%">
+            <img src="./Images/The-Fresh-Market_55_660x440.webp" alt="image-for-history">
+          </td>
+
+          <td>
+            <p class="p2">
+              We started this journey from tiny wooden table having our united dream of sourcing healthy and organic food to our community. Not only sourcing the organic products but also helping our local farmers who are the true experts of producing these organic and freshly hand-picked foods. We directly partnered with our local farmers and started from very small office in a wooden table where we four worked together having vision to bring freshest and healthiest food to our community. 
+              <br><br>
+              In 2022, we implemented this vision when the world was suffering from pandemic disease COVID-19. At that time not only people were suffering from disease and shortages, but also were deprived financially. Then after, we planned this small start-up of helping local farmers and invested our savings and sold our organic products at reasonable price with top-quality. Our journey took turns when we started to get fame and good reviews from our community and we grew high and more. And then we planned for opening our pop-up store converting from tables to counters, small laptops to cashier tables and tiny baskets to shopping-carts. Finally at the end of 2023, we opened our first pop-up store in Kathmandu and named it "Kirana Station" and our first opening day we were overwhelmed of so many people visiting our very first own pop-up store. 
+              <br><br>
+              We were only small dreamers who envisioned of doing something anew and helping our local farmers and providing our community with healthiest foods but never imagined we would grow this big. We are very grateful to our loyal customers who supported us since the beginning of our journey when we were just based online and till now. 
+              <br>
+              But our journey and vision doesn't end here, we are expanding more in near future and our aim is to open our franchise globally both e-store and physical store.
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+<!--Team Info-->
+<div class="team">
+  <p style="text-align: center; font-size: 60px; padding-top: 60px; font-weight: bold;">
+      Meet Our Team
+  </p>
+    <div class="member">
+<!--creating single cell for each member-->
+      <div class="cell" onclick="display('aaditya')">
+        <div class="image-container">
+          <img src="./Images/aaditya.jpg" alt="Aaditya">
+        </div>
+        <div class="member-info">
+          <h4>Aaditya Bhattarai</h4>
+          <div class="icons-logo">
+           <a href="https://www.facebook.com/Aaditya981?mibextid=LQQJ4d"><i class="fa fa-facebook" style="color: black;"></i></a>
+           <a href="https://www.instagram.com/shhh_immewing?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram" style="color: black;"></i></a>
+           <a href=""><i class="fa fa-linkedin" style="color: black;"></i></a>
+         </div>
+         </div>
+      </div>
+
+      <div class="cell" onclick="display('pragun')">
+        <div class="image-container">
+          <img src="./Images/pragun.jpg" alt="Pragun">
+        </div>
+        <div class="member-info">
+          <h4>Pragun Maskey</h4>
+          <div class="icons-logo">
+           <a href="https://www.facebook.com/pragun.maskey?mibextid=LQQJ4d"><i class="fa fa-facebook" style="color: black;"></i></a>
+           <a href="https://www.instagram.com/pragun_maskey?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram" style="color: black;"></i></a>
+           <a href="https://www.linkedin.com/in/pragun-raj-maskey-a31914280/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+         </div>
+         </div>
+      </div>
+
+      <div class="cell" onclick="display('soumyata')">
+        <div class="image-container">
+          <img src="./Images/soumyata.jpg" alt="Soumyata">
+        </div>
+        <div class="member-info">
+         <h4>Soumyata Shakya</h4>
+         <div class="icons-logo">
+          <a href=https://www.facebook.com/soumyata.shakya.3?mibextid=LQQJ4d"><i class="fa fa-facebook" style="color: black;"></i></a>
+          <a href="https://www.instagram.com/soumyata_grg_shkya?igsh=MTFsdnR4bjc2aGkzZA%3D%3D&utm_source=qr"><i class="fa fa-instagram" style="color: black;"></i></a>
+          <a href="https://www.linkedin.com/in/soumyata-shakya-1b7b7b2b7/"><i class="fa fa-linkedin" style="color: black;"></i></a>
+        </div>
+        </div>
+      </div>
+      
+      <div class="cell" onclick="display('aarati')">
+        <div class="image-container">
+          <img src="./Images/aarti.jpg" alt="Aarati">
+        </div>
+        <div class="member-info">
+          <h4>Aarati Dhakal</h4>
+          <div class="icons-logo">
+           <a href="https://www.facebook.com/share/CUpB2cp8YHsWJAhJ/?mibextid=JRoKGi"><i class="fa fa-facebook" style="color: black;"></i></a>
+           <a href="https://www.instagram.com/aarati__dhakal?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa fa-instagram" style="color: black;"></i></a>
+           <a href="https://www.linkedin.com"><i class="fa fa-linkedin" style="color: black;"></i></a>
+         </div>
+         </div>
+      </div>
+  </div>
+  <div class="cv-container">
+    <div class="cv" id="aaditya">
+      <div class="info-of">
+        <span style="width: 50px;"></span>
+        <span style="background-color: rgb(180, 160, 160);" >
+          <img src="./Images/aaditya.jpg" width="275px" height="275px" alt="profile-pic">
+        </span>
+        <span style="padding-top: 120px; padding-left: 50px;">
+          <h1 style="font-size: 60px;">AADITYA<BR>BHATTARAI</h1><br>
+         <p>Student</p>
+        </span>
+      </div>
+      <div class="cv-content">
+        <span style="width: 50px;height: 800px;"></span>
+        <section id="col1">
+            <section id="profile">
+              <h2>Profile</h2><br>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatum, suscipit maiores dolor laboriosam vitae eveniet vero necessitatibus nesciunt nam expedita quisquam nihil quasi, illo voluptatibus officiis similique autem sint?
+              </p>
+            </section>
+            <section>
+            <h2>Contacts</h2><br>
+            <div class="contact">
+              <i class="fa fa-phone"></i><p>+977 9851838852</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-envelope"></i><p>kiranaStation@gmail.com</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-location"></i><p>Shankhamul, Kathmandu</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-linkedin"></i><p>@KiranaMakers</p>
+            </div>
+            </section>
+        </section>
+        <section id="col2">
+           <h2>EDUCATION</h2><BR>
+           <section class="edu">
+            <h4>ISLINGTON COLLEGE</h4>
+            <p>BSc(hons) Computing (2024-present)</p>
+           </section><BR>
+           <section class="edu">
+            <h4>Global College</h4>
+            <p>+2 NEB (2021-2023) </p>
+           </section><br>
+           <section class="edu">
+            <h4>Radiant School</h4>
+            <p>SEE (2011-2021)</p>
+           </section>
+           <br><br>
+           <h2>Language</h2><br>
+           <section class="lang">
+            <p>
+              Native Nepali<br><br>
+              Fluent English<br><br>
+              Fluent Spanish
+            </p>
+           </section><br><br>
+           <h2>Computational Skill</h2><br>
+           <section class="skill">
+            <p>
+              HTML <br><br>
+              CSS <br><br>
+              JavaScript<br><br>
+              Java<br><br>
+              Python
+            </p>
+           </section><br><br>
+           <h2>Volunteer Work</h2><br>
+           <section class="volunteer">
+            <h4>Golden Music Label (2020-present)</h4>
+            <p>Working as a producer for various musicians.</p>
+           </section>
+        </section>
+      </div>
+    </div>
+    <div class="cv" id="pragun" >
+      <div class="info-of">
+        <span style="width: 50px;"></span>
+        <span style="background-color: rgb(180, 160, 160);" >
+          <img src="./Images/pragun.jpg" width="275px" height="275px" alt="profile-pic">
+        </span>
+        <span style="padding-top: 120px; padding-left: 50px;">
+          <h1 style="font-size: 60px;">PRAGUN<BR>MASKEY</h1><br>
+        <p>Student</p>
+        </span>
+      </div>
+      <div class="cv-content">
+        <span style="width: 50px;height: 800px;"></span>
+        <section id="col1">
+            <section id="profile">
+              <h2>Profile</h2><br>
+              <p>Enthusiastic and diligent student  ready to thrive for new challenges. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatum, suscipit maiores dolor laboriosam vitae eveniet vero necessitatibus nesciunt
+              </p>
+            </section>
+            <section>
+            <h2>Contacts</h2><br>
+            <div class="contact">
+              <i class="fa fa-phone"></i><p>+977 9851838852</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-envelope"></i><p>kiranaStation@gmail.com</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-location"></i><p>Shankhamul, Kathmandu</p>
+            </div><br>
+            <div class="contact">
+              <i class="fa fa-linkedin"></i><p>@KiranaMakers</p>
+            </div>
+            </section>
+        </section>
+        <section id="col2">
+          <h2>EDUCATION</h2><BR>
+          <section class="edu">
+            <h4>ISLINGTON COLLEGE</h4>
+            <p>BSc(hons) Computing (2024-present)</p>
+           </section><BR>
+           <section class="edu">
+            <h4>GIHE</h4>
+            <p>+2 NEB (2021-2023) </p>
+           </section><br>
+           <section class="edu">
+            <h4>Radiant School</h4>
+            <p>SEE (2011-2021)</p>
+           </section>
+          <br><br>
+          <h2>Language</h2><br>
+          <section class="lang">
+            <p>
+              Native Nepali<br><br>
+              Fluent English<br><br>
+              Fluent French
+            </p>
+          </section><br><br>
+          <h2>Computational Skill</h2><br>
+          <section class="skill">
+            <p>
+              HTML <br><br>
+              CSS <br><br>
+              JavaScript<br><br>
+              Java<br><br>
+              Python
+            </p>
+          </section><br><br>
+          <h2>Work Experience</h2><br>
+          <section class="volunteer">
+            <h4>LLoud (2021-2023)</h4>
+            <p>Worked as a graphic designer.</p>
+          </section>
+        </section>
+      </div>
+    </div>
+    <div class="cv" id="soumyata">
+      <div class="info-of">
+        <span style="width: 45px;"></span>
+        <span style="background-color: rgb(180, 160, 160);" >
+          <img src="./Images/soumyataCV.jpg" width="275px" height="275px" alt="profile-pic">
+        </span>
+        <span style="padding-top: 120px; padding-left: 50px;">
+        <h1 style="font-size: 60px;">SOUMYATA<BR>SHAKYA</h1><br>
+        <p>Student</p>
+        </span>
+    </div>
+    <div class="cv-content">
+      <span style="width: 50px; height: 800px;"></span>
+      <section id="col1">
+          <section id="profile">
+            <h2>Profile</h2><br>
+           <p> 
+            I am hardworking and ambitious person searching for internship opportunity and willing to take any task to support the team and help the business succeed and want to enhance my skills. Learn with like-minded
+            people.I have an ability to work effectively and loyally in teams and yearning to apply my classroom-knowledge to real-life world scenarios and get experience.
+          </p>
+          </section>
+          <section>
+          <h2>Contacts</h2><br>
+          <div class="contact">
+            <i class="fa fa-phone"></i><p>+977 9819548929</p>
+          </div><br>
+          <div class="contact">
+            <i class="fa fa-envelope"></i><p>soumyatashakya80@gmail.com</p>
+          </div><br>
+          <div class="contact">
+            <i class="fa fa-location"></i><p>Chandol,Kathmandu</p>
+          </div><br>
+          <div class="contact">
+            <i class="fa fa-linkedin"></i><p>linkedin/soumyata-shakya</p>
+          </div>
+          </section>
+      </section>
+      <section id="col2">
+         <h2>EDUCATION</h2><BR>
+         <section class="edu">
+          <h4>Islington College Kathmandu</h4>
+          <p>
+            Bsc(hons)Computing
+            <br>
+            February, 2024 - Present
+          </p>
+         </section><BR>
+         <section class="edu">
+          <h4>Brightland College</h4>
+          <p>
+            +2(Management)
+          <br>
+          August,2020 - June,2022
+          </p>
+         </section><br>
+         <section class="edu">
+          <h4>Angels School</h4>
+          <p>
+            SEE
+            <br>
+            2019
+          </p>
+         </section>
+         <br><br>
+         <h2>Language</h2><br>
+         <section class="lang">
+          <p>
+            Nepali<br><br>
+            English<br><br>
+            Hindi
+          </p>
+         </section><br><br>
+         <h2>Skills</h2><br>
+         <section class="skill">
+          <p>
+           Basic knowledge on front-end technology - HTML, CSS, Javascript.
+           <br>
+           Fast Typing - Skillful
+           <br>
+            Communication skill and Time management skill - Skillful
+            <br>
+            Story Telling - Skillful
+          </p>
+         </section><br><br>
+         <h2>Work Experience</h2><br>
+         <section class="volunteer">
+          <h4>ING Skill Academy Company</h4>
+          <p>
+            Currently working as Experienced Ambassador(EA) 
+            <br>
+            -Intern
+          </p>
+         </section>
+      </section>
+    </div>
+    </div>
+    <div class="cv" id="aarati">
+  <div class="info-of">
+    <span style="width: 50px;"></span>
+    <span style="background-color: rgb(180, 160, 160);" >
+      <img src="./Images/aarti.jpg" width="275px" height="275px" alt="profile-pic">
+    </span>
+    <span style="padding-top: 120px; padding-left: 50px;">
+      <h1 style="font-size: 60px;">AARATI<BR>DHAKAL</h1><br>
+     <p>Student</p>
+    </span>
+  </div>
+  <div class="cv-content">
+    <span style="width: 50px;height: 800px;"></span>
+    <section id="col1">
+      <section id="profile">
+        <h2>Profile</h2><br>
+        <p>A young entrepreneur with a creative and strong mindset. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptatum, suscipit maiores dolor laboriosam vitae eveniet vero necessitatibus nesciunt. 
+        </p>
+      </section>
+      <section>
+      <h2>Contacts</h2><br>
+      <div class="contact">
+        <i class="fa fa-phone"></i><p>+977 9851838852</p>
+      </div><br>
+      <div class="contact">
+        <i class="fa fa-envelope"></i><p>kiranaStation@gmail.com</p>
+      </div><br>
+      <div class="contact">
+        <i class="fa fa-location"></i><p>Shankhamul, Kathmandu</p>
+      </div><br>
+      <div class="contact">
+        <i class="fa fa-linkedin"></i><p>@KiranaMakers</p>
+      </div>
+      </section>
+  </section>
+    <section id="col2">
+       <h2>EDUCATION</h2><BR>
+        <section class="edu">
+          <h4>ISLINGTON COLLEGE</h4>
+          <p>BSc(hons) Computing (2024-present)</p>
+         </section><BR>
+         <section class="edu">
+          <h4>Global College</h4>
+          <p>+2 NEB (2021-2023) </p>
+         </section><br>
+         <section class="edu">
+          <h4>Radiant School</h4>
+          <p>SEE (2011-2021)</p>
+         </section>
+       <br><br>
+       <h2>Language</h2><br>
+       <section class="lang">
+        <p>
+          Native Nepali<br><br>
+          Fluent English<br><br>
+          Fluent Italian
+        </p>
+       </section><br><br>
+       <h2>Computational Skill</h2><br>
+       <section class="skill">
+        <p>
+          HTML <br><br>
+          CSS <br><br>
+          JavaScript<br><br>
+          Java<br><br>
+          Python
+        </p>
+       </section><br><br>
+       <h2>Work Experience</h2><br>
+       <section class="volunteer">
+        <h4>Odd Attelier (2022-present)</h4>
+        <p>Worked as a social media manager.</p>
+       </section>
+    </section>
+  </div>
+    </div>
+  </div>
+</div>
+
+<!--testimonials section-->
+<div class="container" style="background-color: #6D8A5D; height: 600px; width: 100%;"> 
+  <p style="text-align: center; font-size: 60px; position: relative; top: 10px; color: rgb(210, 228, 203);">
+    Testimonials
+  </p>
+<div class="testimonial_container">
+
+<!--for single testimonial-->
+  <div class="testimonial_image">
+      <img src="./Images/IMG_20210702_120258_284.jpg" alt="Sneha" height="100px" width="100px">
+<!--names of reviewer-->
+  <div class="testimonial_review">
+    <center>
+    <h4>
+      Sneha Sapkota
+    </h4>
+
+<!--stars-->
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </center>
+
+<!--review text-->
+      <p>
+        A being a food lover, I absolutely love shopping with Kirana Station! Their wide selection, user-friendly website, and prompt delivery have made my grocery shopping experience so much easier and convenient.
+      </p>
+    </div>
+  </div>
+
+<!--for single testimonial-->
+  <div class="testimonial_image">
+      <img src="./Images/pranjcvphoto.jpg" alt="pranjali" height="100px" width="100px">
+
+<!--names of reviewer-->
+  <div class="testimonial_review">
+    <center>
+    <h4>
+      Pranjali Prasai
+    </h4>
+
+<!--stars-->
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </center>
+<!--review text-->
+      <p>
+        I am literally so lazy to just get up and go to store for shopping but Kirana Station made this all so easier and I can just shop all of my essentials in just one click. I love how it is so much easier.
+      </p>
+    </div>
+  </div>
+
+<!--for single testimonial-->
+    <div class="testimonial_image">
+      <img src="./Images/kkenshu.jpg" alt="kenshu" height="100px" width="100px">
+
+<!--names of reviewer-->
+<div class="testimonial_review">
+    <center>
+    <h4>
+      Kenshu Lama
+    </h4>
+
+<!--stars-->
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </center>
+<!--review text-->
+      <p>
+        Actually I am a office person and having time to for grocery shopping and have fresh food is really hard for me but thanks to Kirana Station I can have all of my grocery products in just few minutes and also I don't have to worry aboout the quality too. The quality with reasonable price they provide is really trustable.  
+      </p>
+    </div>
+  </div>
+
+<!--for single testimonial-->
+    <div class="testimonial_image">
+      <img src="./Images/DD4DD326-E56B-47B8-9DE0-CC48FFCE8079.JPG" alt="Renid" height="100px" width="100px">
+
+<!--names of reviewer-->
+  <div class="testimonial_review">
+    <center>
+    <h4>
+      Renid Rai
+    </h4>
+
+<!--stars-->
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    </center>
+<!--review text-->
+      <p>
+        Finally, a good e-grocery story in city!! As a boy who is a student and also doesn't know much about grocery things and how to and what to buy?? Kirana Station made all of this so much easier. Best store ever and I recommend everyone to try from this store because their products are top-notch!!! 
+      </p>
+    </div>
+  </div>
+  </div>
+    </div>
+    <hr style="margin-bottom: 50px;">
+    <div class="membershipform" id="membershipform">
+      <p style="text-align: center; font-size: 60px;">
+        Membership Form
+      </p>
+      <div class="form-box">
+        <form onsubmit="alert('Congratulations!You are our store loyal member!')">
+        Name:
+        <br><br><span id="name">
+        <input type="text" name = "First Name" placeholder="First" id="first" required>        
+        <input type="text" name = "Last Name" placeholder="Last" id="last" required>
+        </span><br><br>
+      
+        Gender:
+        <br><br>
+        <input type="radio" name="Gender" value="male" checked>
+        Male <input type="radio" name = "Gender" value="Female"> Female <input type="Radio" name="Gender" value="Others"> Others
+        <br><br>
+        
+        Address:
+        <br><br>
+        <input type="text" name = "Street Name" placeholder="Street Name" required>
+        <br><br>
+        <input type="text" name = "City" placeholder="City" required>
+        <br><br>
+        <select>
+          <option value="Koshi" >Koshi Province</option>
+          <option value="Madhesh">Madhesh Province</option>
+          <option value="Bagmati">Bagmati Province</option>
+          <option value="Gandaki">Gandaki Province</option>
+          <option value="Lumbini">Lumbini Province</option>
+          <option value="Karnali">Karnali Province</option>
+          <option value="Sudurpashchim">Sudurpaschim Province</option>
+        </select>
+        <br><br>
+        <input type="text" name = "Postal Code" placeholder="Postal Code">
+        <br><br>
+
+        Contact: 
+        <br><br>
+        <input type="tel" name = "phone" placeholder="+977 ##########" required>
+        <br><br>
+        
+        E-mail:
+        <br><br>
+        <input type="text" name = "E-mail" placeholder="name@domain.com" required>
+        <br><br>
+        <input type="checkbox" name="Termscondition" required> I agree to Kirana Station's Terms and Conditions and Privacy Policy.
+        <br><br>
+        <button type="Submit" id="membershipp"> Join us </button>
+     </form>
+      </div>
+    </div>
+    <div class="infomembership">
+      <p class="get">
+        What do our members get?
+      </p>
+      <ul>
+        <li>5% additional discount on any ongoing offers or deals.</li>
+        <li>10% off for a lifetime on every purchase.</li>
+      </ul>
+    <p class="get">
+      What do our buyers need to do get our store membership?
+    </p>
+    <ul>
+      <li>Fill out the form with required details.</li>
+      <li>Pay one time fee of Rs.700 and enjoy the services provided by us. </li>
+    </ul>
+    </div>
+  </div>
+  <footer class="footer-container">
+    <div class="left-footer">
+      <img src="./Images/SiteLogo.png" alt="siteLogo">
+      <p><b>KiranaStation</b> is an e-commerce grocery website designed to satisfy your needs to find healthy, organic, pesticide free vegetables and fruits right at your door steps without any hastle. Choose how your pantry looks from our store. We make it fast easy and convinient.</p>
+      <h2>Follow Us</h2>
+      <section class="followUs">
+        <a><i class="fa fa-facebook"></i></a>
+        <a><i class="fa fa-twitter"></i></a>
+        <a><i class="fa fa-instagram"></i></a>
+        <a><i class="fa fa-youtube"></i></a>
+        <a><i class="fa fa-pinterest"></i></a>
+      </section>
+    </div>
+    <div class="quicklink">
+      <h2>Quick Links<br></h2>
+      <div>
+        <a href="./index.html">Home</a>
+        <a href="./Shop Page/shop/FruitsPage.html">Shop Now</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./research.html">Research Page</a>
+        <a href="./aboutus.html">About Us</a>
+        <a href="./Shop Page/Extras/PageInDev.html">Log In</a>
+      </div>
+    </div>
+    <div class="contact-detail">
+      <h2>Contacts</h2>
+      <div>
+        <section>
+          <h3><i class="fa fa-location-dot"></i>&nbsp;&nbsp;Address</h3>
+          <p>Lazimpat Marg, Kathmandu, Nepal</p>
+        </section>
+        <section>
+          <h3><i class="fa fa-phone"></i>&nbsp;&nbsp;Phone</h3>
+          <p>+977 971-2525-767</p>
+        </section>
+        <section>
+          <h3><i class="fa fa-envelope"></i>&nbsp;&nbsp;Mail Us</h3>
+          <a href="mailto:customerservice@kiranastation.com">customerservice@KiranaStation.com</a>
+        </section>
+      </div>
+    </div>
+    <div class="right-footer">
+      <h2>Payment Methods</h2>
+      <section class="payments">
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-paypal"></i>
+        <i class="fa-brands fa-google-pay"></i>
+      </section>
+      <div id="line"></div>
+      <h2 id="map">Google Maps</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3118409609833!2d85.32266147546738!3d27.70765647618234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1908434cb3c5%3A0x1fdf1a6d41d2512d!2sIslington%20College!5e0!3m2!1sen!2snp!4v1714233716877!5m2!1sen!2snp" width="360 " height="190" style="border:2px solid black; filter: grayscale(0%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </footer>
+  <section class="bottom-footer">
+    <p>&copy; 2020-2024&nbsp;&nbsp;KiranaStation.&nbsp;&nbsp;All Rights Reserved.</p>
+    <div>
+      <a>Terms and Conditions</a>
+      <a>Cookie Policy</a>
+      <a>Privacy Policy</a>
+    </div>
+  </section>
+  <script>
+  function display(profile) {
+    var pro = document.getElementById(profile);
+    if (pro.style.display === 'block') {
+      pro.style.display = 'none';
+    } else {
+      // Hide all profiles first
+      hideAllProfiles();
+      // Then display the selected profile
+      pro.style.display = 'block';
+    }
+  }
+
+  function hideAllProfiles() {
+    var profiles = document.getElementsByClassName('cv');
+    for (var i = 0; i < profiles.length; i++) {
+      profiles[i].style.display = 'none';
+    }
+  }
+
+  function setRating(stars) {
+  for (var i = 1; i <= 5; i++) {
+    var starElement = document.getElementById(i);
+    if (i <= stars) {
+      starElement.classList.add('checked');
+    } else {
+      starElement.classList.remove('checked');
+    }
+  }
+}
+    
+  </script>
+</body>
+</html>
